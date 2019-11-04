@@ -1,0 +1,43 @@
+.dropdown:hover>.dropdown-menu
+{
+	display: block;
+}
+#he1
+{
+	font-size: 50px;
+	/*font-weight: bold;*/
+	/*font-style: italic;*/
+	color: #ff884d;
+	text-align: center;
+	margin-top: 20px;
+	font-family: Gabriola;
+}
+#he2
+{
+	font-size: 80px;
+	font-weight: bold;
+	/*font-style: italic;*/
+	color: #ffcc66;
+	text-align: center;
+	font-family: Gabriola;
+	margin-top: 20px;
+}
+#d1
+{
+  background: url('img/b11.jpg');   
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-attachment: scroll;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+#d2
+{
+	/*background: url('img/d1.jpg');
+	background-repeat: no-repeat;
+  background-size: 100%;
+  background-attachment: scroll;*/
+  height: 100%;
+  width: 100%;
+}
