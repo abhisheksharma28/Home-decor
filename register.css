@@ -4,5 +4,13 @@
 }
 #top1
 {
-	margin-top: 500px;
+	margin-top: 400px;
+}
+.container1
+{
+	background: url('img/registerb.jpg');
+	background-size: 50%;
+	background-repeat: no-repeat;
+	height: 100%;
+	padding: 5px;
 }
