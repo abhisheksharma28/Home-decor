@@ -1,3 +1,32 @@
+<?php
+  $dbhost = 'localhost';
+$username = 'root';
+$password = '';
+$db = 'home decor';
+// Create connection
+$conn = mysqli_connect("$dbhost" , "$username" , "$password");
+//echo "Connected" ;
+mysqli_select_db($conn,$db);
+  $email = (isset($_POST['email']) ? $_POST['email'] : '');
+  $pass = (isset($_POST['password']) ? $_POST['password'] : '');
+  $phone = (isset($_POST['phone']) ? $_POST['phone'] : '');
+  $add = (isset($_POST['address']) ? $_POST['address'] : '');
+  $query = "insert into data(id,email,pass,phone,address) values(NULL,'$email','$pass','$phone','$add');";
+  $result = mysqli_query($conn,$query);
+  $rows = mysqli_num_rows($result);?>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<script type="text/javascript">
+  $(function(){
+    // alert('successfully');
+    Swal.fire(
+    
+      'Sign up',
+      'successfully',
+      'success'
+    )
+  });
+</script>
 <html>
 <head>
 	<title>Register</title>
@@ -81,46 +110,34 @@
   </form>
 </li>
 <li class="nav-item">
-	<a class="nav-link" style="color: #ffd9b3; font-weight: bolder;" href="register.html">New Customer?</a>
+	<a class="nav-link" style="color: #ffd9b3; font-weight: bolder;" href="register.php">New Customer?</a>
 </li>
 <li class="nav-item">
 	<p style="margin-top: 7px; color: grey">||</p>
 </li>
 <li class="nav-item">
-	<a class="nav-link" style="color: #ffd9b3; font-weight: bolder;" href="#">Login</a>
+	<a class="nav-link" style="color: #ffd9b3; font-weight: bolder;" href="login.php">Login</a>
 </li>
   </ul>
 </nav>
 <div class="container1" style="margin-top: 90px;">
-  <form class="was-validated" style="width: 500px; float: right;margin-right: 50px;" action="connect.php" method="POST" >
+  <form style="width: 500px; float: right;margin-right: 50px;" method="POST" >
   <div class="form-group">
     <label for="email1">Email address</label>
     <input type="email" class="form-control" id="email1" aria-describedby="emailHelp" name="email" placeholder="Enter email" required>
-    <div class="valid-feedback">
-    Looks good!</div>
-  </div>
   <div class="form-group">
     <label for="pass1">Password</label>
     <input type="password" class="form-control" id="pass1" name="password" placeholder="Password" required>
-    <div class="valid-feedback">
-    Looks good!</div>
-  </div>
   <div class="form-group">
     <label for="Phone1">Phone Number</label>
     <input type="text" class="form-control" id="Phone1" name="phone" placeholder="Phone Number" required>
-  <div class="valid-feedback">
-    Looks good!</div>
-  </div>
   <div class="form-group">
     <label for="address">Address</label>
     <input type="text" class="form-control" id="address" name="address" placeholder="Address" required>
-    <div class="valid-feedback">
-    Looks good!</div>
-  </div>
   <div class="form-group form-check">
     <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
     <label class="form-check-label" for="exampleCheck1">Accept Terms&conditions</label>
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary">sign up</button>
 </form>
 </div>

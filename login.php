@@ -1,6 +1,27 @@
+<?php
+session_start();
+  $dbhost = 'localhost';
+$username = 'root';
+$password = '';
+$db = 'home decor';
+// Create connection
+$conn = mysqli_connect("$dbhost" , "$username" , "$password");
+//echo "Connected" ;
+mysqli_select_db($conn,$db);
+    $email = (isset($_POST['email']) ? $_POST['email'] : '');
+  $pass = (isset($_POST['password']) ? $_POST['password'] : '');
+  $query = "select * from data where email = '$email' && pass = '$pass' ";
+  $result = mysqli_query($conn,$query);
+  $rows = mysqli_num_rows($result);
+  if($rows == 1){
+  $_SESSION['email'] = $email;
+  header('location:index1.php');
+}
+?>
+</script>
 <html>
 <head>
-	<title>Register</title>
+  <title>Login</title>
 <link rel = "icon" src="icon.png">
 <link rel="stylesheet" type="text/css" href="register.css">
 <meta charset="utf-8">
@@ -13,10 +34,10 @@
   
 </head>
 <body>
-	<nav class="navbar navbar-expand-sm bg-light navbar-light fixed-top">
+  <nav class="navbar navbar-expand-sm bg-light navbar-light fixed-top">
   <!-- Brand -->
   <a class="navbar-brand" href="index.html">
-  	<img src="img/logo.png" width="150px" height="30px">
+    <img src="img/logo.png" width="150px" height="30px">
   </a>
 
   <!-- Links -->
@@ -81,18 +102,18 @@
   </form>
 </li>
 <li class="nav-item">
-	<a class="nav-link" style="color: #ffd9b3; font-weight: bolder;" href="register.html">New Customer?</a>
+  <a class="nav-link" style="color: #ffd9b3; font-weight: bolder;" href="register.php">New Customer?</a>
 </li>
 <li class="nav-item">
-	<p style="margin-top: 7px; color: grey">||</p>
+  <p style="margin-top: 7px; color: grey">||</p>
 </li>
 <li class="nav-item">
-	<a class="nav-link" style="color: #ffd9b3; font-weight: bolder;" href="#">Login</a>
+  <a class="nav-link" style="color: #ffd9b3; font-weight: bolder;" href="login.php">Login</a>
 </li>
   </ul>
 </nav>
 <div class="container1" style="margin-top: 90px;">
-  <form class="was-validated" style="width: 500px; float: right;margin-right: 50px;" action="connect.php" method="POST" >
+  <form class="was-validated" style="width: 500px; float: right;margin-right: 50px;" method="POST" >
   <div class="form-group">
     <label for="email1">Email address</label>
     <input type="email" class="form-control" id="email1" aria-describedby="emailHelp" name="email" placeholder="Enter email" required>
@@ -104,22 +125,6 @@
     <input type="password" class="form-control" id="pass1" name="password" placeholder="Password" required>
     <div class="valid-feedback">
     Looks good!</div>
-  </div>
-  <div class="form-group">
-    <label for="Phone1">Phone Number</label>
-    <input type="text" class="form-control" id="Phone1" name="phone" placeholder="Phone Number" required>
-  <div class="valid-feedback">
-    Looks good!</div>
-  </div>
-  <div class="form-group">
-    <label for="address">Address</label>
-    <input type="text" class="form-control" id="address" name="address" placeholder="Address" required>
-    <div class="valid-feedback">
-    Looks good!</div>
-  </div>
-  <div class="form-group form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
-    <label class="form-check-label" for="exampleCheck1">Accept Terms&conditions</label>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
