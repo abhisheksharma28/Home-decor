@@ -6,7 +6,7 @@
 {
 	margin-top: 400px;
 }
-.container1
+/*.container1
 {
 	background: url('img/registerb.jpg');
 	background-size: 50%;
@@ -14,4 +14,12 @@
 	height: 100%;
 	padding: 5px;
 	margin-left: 20px;
+}*/
+.ff
+{
+	/*background-color: #f2f2f2;*/
+}
+body
+{
+	background:url('img/c3.jpg');
 }

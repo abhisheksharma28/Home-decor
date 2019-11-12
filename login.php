@@ -33,7 +33,7 @@ mysqli_select_db($conn,$db);
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   
 </head>
-<body>
+<body style="background:url('img/c3.jpg'); background-position: center;background-size: 100%;background-repeat: no-repeat;height: 100%">
   <nav class="navbar navbar-expand-sm bg-light navbar-light fixed-top">
   <!-- Brand -->
   <a class="navbar-brand" href="index.html">
@@ -112,20 +112,58 @@ mysqli_select_db($conn,$db);
 </li>
   </ul>
 </nav>
-<div class="container1" style="margin-top: 90px;">
-  <form class="was-validated" style="width: 500px; float: right;margin-right: 50px;" method="POST" >
-  <div class="form-group">
-    <label for="email1">Email address</label>
-    <input type="email" class="form-control" id="email1" aria-describedby="emailHelp" name="email" placeholder="Enter email" required>
-    <div class="valid-feedback">
-    Looks good!</div>
-  </div>
-  <div class="form-group">
-    <label for="pass1">Password</label>
-    <input type="password" class="form-control" id="pass1" name="password" placeholder="Password" required>
-    <div class="valid-feedback">
-    Looks good!</div>
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <!-- <div class="ii" style="width: 20%;">
+    <img class="ml-5" style="margin-top:150px" src="img/registerb.jpg">
+  </div> -->
+  <div class="ii">
+  <div class="ff" style="width: 30%;background-color: #f2f2f2;padding: 50px;margin-top: 200px;margin-left: 550px;">
+        <h1 style="text-align:center;font-family: Gabriola;"><b>Login to continue</b></h1>
+      <form class="was-validated" method="POST" >
+      <div class="form-group">
+        <label for="email1">Email</label>
+        <input type="email" style="border:0; outline: 0;
+  background: transparent;border-bottom: 1px solid black;" class="form-control" id="email1"name="email" placeholder="Enter email" required="">
+       <div class="valid-feedback">
+        Looks good!</div>
+      </div>
+       <div class="form-group">
+         <label for="pass1">Password</label>
+         <input type="password" style="border:0; outline: 0;
+  background: transparent;border-bottom: 1px solid black;" class="form-control" id="pass1" name="password" placeholder="Password" required>
+        <div class="valid-feedback">
+        Looks good!</div>
+      </div>
+  <center><button type="submit" class="btn btn-primary">Submit</button></center>
 </form>
 </div>
+</div>
+<footer id="f1" style="background-color: #f2f2f2;margin-top: 100px;" class="footer mt-5">
+        <div class="text-center py-5" style="margin-top: 300px;">
+            <h2 class="py-3">Home Decor</h2>
+            <div class="mx-auto heading-line"></div>
+        </div>
+        <div class="container">
+            <div class="row mb-3">
+                <div class="col-lg-8 offset-lg-2 text-center">
+                    <p>We are here to provide you the best in class services for your home decoration dream. Feel free to contact we are 24*7 available for your help.</p>
+                    <ul class="nav justify-content-center ">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Shop now</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright text-center py-3 border-top text-muted">
+                <p>Made by Abhishek Sharma &copy; 2019</p>
+                <p><a href="#">https://www.HomeDecor.com</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

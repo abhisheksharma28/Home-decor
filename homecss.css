@@ -4,12 +4,12 @@
 }
 #he1
 {
-	font-size: 50px;
-	/*font-weight: bold;*/
+	font-size: 23px;
+	font-weight: bold;
 	/*font-style: italic;*/
-	color: #ff884d;
+	/*color: #ff884d;*/
 	text-align: center;
-	margin-top: 20px;
+	margin-top: 50px;
 	font-family: Gabriola;
 }
 #he2
@@ -26,11 +26,12 @@
 {
   background: url('img/b11.jpg');   
   background-repeat: no-repeat;
-  background-size: 100%;
+  /*background-size: 100%;*/
+  /*padding: 10px;*/
   background-attachment: scroll;
   background-position: center;
-  height: 100%;
-  width: 100%;
+  /*height: 100%;*/
+  /*width: 100%;*/
 }
 #d2
 {
@@ -40,4 +41,10 @@
   background-attachment: scroll;*/
   height: 100%;
   width: 100%;
+}
+#f1
+{
+	text-decoration: none;
+	color: grey;
+	background-color: #ffd9b3;
 }
